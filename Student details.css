@@ -1,0 +1,112 @@
+.heading1 {
+	text-align: center;
+	margin-top: 100px;
+}
+
+.heading2 {
+	text-align: center;
+	margin-top: 100px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Poppins", sans-serif;
+}
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#000;
+    z-index: -1;
+    opacity: 0.1;
+}
+.teamMembers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 6vh 0;
+    flex-direction: column;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.round{
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid green;
+    margin: 0 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    position: relative;
+}
+.round img{
+    vertical-align: bottom;
+    transition: all 0.3s ease;
+}
+.infodet{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #90ffEE90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    transform-origin: 0%;
+}
+.name{
+    font-size: 25px;
+    font-weight: 600;
+    color: #82052a;
+    transform: scale(0);
+    transform-origin: 0%;
+    transition: all 0.3s ease;
+}
+.role{
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+    margin-top: -4px;
+    transform: scale(0);
+    transform-origin: 0%;
+    transition: all 0.3s ease;
+}
+
+.round:hover  .infodet{
+    transform: scale(1);
+}
+.round:hover img{
+    transform: scale(1.1);
+}
+
+.round:hover .name,
+.round:hover .role{
+    transform: scale(1);
+}
+
+.round:hover .name{
+    transition: all 0.3s ease 0.3s;
+}
+
+.round:hover .role{
+    transition: all 0.3s ease 0.4s;
+}
